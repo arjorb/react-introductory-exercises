@@ -1,5 +1,11 @@
+import Box from './components/Box';
+
 const App = () => {
-  return <h1 className='text-3xl text-[#017880] font-bold flex justify-center'>React Intoductory Exercise!</h1>;
+  return (
+    <div className='flex justify-center items-center h-screen'>
+      <Box />
+    </div>
+  );
 };
 
 export default App;
