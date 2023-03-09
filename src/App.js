@@ -12,7 +12,9 @@ const App = () => {
   };
 
   const handleSubmit = () => {
-    alert(`Hello, ${formData.firstname} ${formData.lastname} !`);
+    formData.firstname || formData.lastname
+      ? alert(`Hello, ${formData.firstname} ${formData.lastname} !`)
+      : alert(`Enter atleast one name`);
     setFormData({ firstname: '', lastname: '' });
   };
   return (
@@ -24,6 +26,7 @@ const App = () => {
           value={formData.firstname}
           onChange={handleChange}
           placeholder='First name'
+          required
           className='w-full border border-slate-200 py-1 rounded-sm outline-none pl-1'
         />
         <input
