@@ -1,8 +1,10 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
+import Animal from './components/Animal';
 const App = () => {
-  const [animals, setAnimals] = useEffect(['🐶 dog', '🐈 cat', '🐣 chicken', '🐄 cow', '🐑 sheep', '🐴 horse']);
+  const [animals, setAnimals] = useState(['🐶 dog', '🐈 cat', '🐣 chicken', '🐄 cow', '🐑 sheep', '🐴 horse']);
 
-  return <h1 className='text-3xl text-[#017880] font-bold flex justify-center'>React Intoductory Exercise!</h1>;
+  const animalsElement = animals.map((animal, index) => <Animal key={index} animal={animal} />);
+  return <h1 className='flex flex-col mt-10 ml-10'>{animalsElement}</h1>;
 };
 
 export default App;
