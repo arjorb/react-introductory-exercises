@@ -1,5 +1,9 @@
+import { useState } from 'react';
 const App = () => {
-  return <h1 className='text-3xl text-[#017880] font-bold flex justify-center'>React Intoductory Exercise!</h1>;
+  const [animals, setAnimal] = useState(['dog', 'cat', 'chicken', 'cow', 'sheep', 'horse']);
+
+  const animalList = animals.map((animal, index) => <li key={index}>{animal}</li>);
+  return <ul className='marker:text-green-500 list-outside list-disc ml-10 mt-10'>{animalList}</ul>;
 };
 
 export default App;
