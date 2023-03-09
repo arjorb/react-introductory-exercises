@@ -13,6 +13,7 @@ const App = () => {
 
   const handleSubmit = () => {
     alert(`Hello, ${formData.firstname} ${formData.lastname} !`);
+    setFormData({ firstname: '', lastname: '' });
   };
   return (
     <div className='flex justify-center mt-10'>
