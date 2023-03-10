@@ -1,4 +1,4 @@
-export default DATA = [
+export const DATA = [
   {
     id: 1,
     setup: "What's the best thing about a Boolean?",
