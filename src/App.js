@@ -31,7 +31,7 @@ const App = () => {
       </button>
 
       {loading ? (
-        <p>Loading...</p>
+        <img src='./loader.svg' alt='loader' />
       ) : (
         <main className='flex flex-wrap justify-center w-10/12 gap-5 mt-10'>{CardElement}</main>
       )}
