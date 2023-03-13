@@ -1,5 +1,8 @@
+import Animal from './components/Animal';
+
 const App = () => {
-  return <h1 className='text-3xl text-[#017880] font-bold flex justify-center'>React Intoductory Exercise!</h1>;
+  const animals = ['🐶 dog', '🐈 cat', '🐣 chicken', '🐄 cow', '🐑 sheep', '🐴 horse'];
+  return <Animal animals={animals} />;
 };
 
 export default App;
